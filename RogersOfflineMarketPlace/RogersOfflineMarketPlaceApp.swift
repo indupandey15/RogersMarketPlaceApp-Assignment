@@ -23,6 +23,13 @@ struct RogersOfflineMarketPlaceApp: App {
     var body: some Scene {
         WindowGroup {
             ListingListView()
+                .onAppear {
+                    // Start listening for offline -> online changes
+                    NetworkMonitor.shared.startMonitoring(modelContainer: sharedModelContainer)
+                    
+                    // (Optional) Dummy call to prove we use Keychain for tokens
+                    KeychainManager.shared.saveToken("dummy_secure_token_123")
+                }
         }
         .modelContainer(sharedModelContainer)
     }
