@@ -16,7 +16,7 @@ actor SyncEngine: ModelActor {
     let modelExecutor: any ModelExecutor
     
     private let apiClient: APIClientType
-    private let logger = Logger(subsystem: "com.marketplaceapp", category: "SyncEngine")
+    private let logger = Logger(subsystem: "com.RogersOfflineMarketPlace", category: "SyncEngine")
     
     init(modelContainer: ModelContainer, apiClient: APIClientType = MockAPIClient()) {
         self.modelContainer = modelContainer

@@ -39,7 +39,7 @@ class MockAPIClient: APIClientType {
                 title: "Vintage Camera",
                 itemDescription: "A cool vintage camera.",
                 price: 150.0,
-                imageUrl: "https://picsum.photos/seed/camera/200/200",
+                imageUrl: "https://picsum.photos/seed/watch/200/200",
                 createdAt: Date().addingTimeInterval(-86400),
                 updatedAt: Date().addingTimeInterval(-86400)
             )
